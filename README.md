@@ -3,7 +3,7 @@
 Proyek ini adalah layanan pengumpul log (aggregator) berbasis Python FastAPI yang mendukung pengiriman asinkron, deduplikasi data, dan persistensi menggunakan SQLite.
 
 ## 📺 Demo Video
-**Link YouTube:** [Tulis Link Video Anda di Sini]
+**Link YouTube:** (https://www.youtube.com/watch?v=iWcvJES3J3M&t=151s)
 
 ## 🚀 Cara Menjalankan
 1. Pastikan Docker dan Docker Compose sudah terinstal.
