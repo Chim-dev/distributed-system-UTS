@@ -12,8 +12,8 @@ RUN adduser --disabled-password --gecos '' appuser && \
 USER appuser
 
 # Copy file requirements duluan biar proses install di-cache sama Docker
-COPY --chown=appuser:appuser requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY --chown=appuser:appuser Requirements.txt .
+RUN pip install --no-cache-dir -r Requirements.txt
 
 # Copy semua file kode lu (folder src)
 COPY --chown=appuser:appuser src/ ./src/

@@ -1,10 +1,10 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 from .models import Event
 from . import dedup
 import time
 
 # Ubah jadi router biar bisa di-include
-router = FastAPI()
+router = APIRouter()
 
 stats = {
     "received": 0,

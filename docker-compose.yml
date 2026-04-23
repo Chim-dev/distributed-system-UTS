@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/app  # Opsional: biar file dedup.db muncul di folder lokal lu
+      - ./src:/app/src  # Opsional: biar file dedup.db muncul di folder lokal lu
     networks:
       - aggregator-net
 
