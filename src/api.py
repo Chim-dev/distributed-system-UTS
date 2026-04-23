@@ -38,6 +38,26 @@ async def event_consumer():
 @router.on_event("startup")
 async def startup_event():
     dedup.init_db()
+    
+    # Inisialisasi statistik dari database agar tidak 0 setelah restart
+    conn = dedup.sqlite3.connect(dedup.DB_NAME)
+    cursor = conn.cursor()
+    try:
+        # Hitung data unik
+        cursor.execute("SELECT COUNT(*) FROM processed_events")
+        stats["unique_processed"] = cursor.fetchone()[0]
+        
+        # Ambil daftar topik
+        cursor.execute("SELECT DISTINCT topic FROM processed_events")
+        rows = cursor.fetchall()
+        for row in rows:
+            stats["topics"].add(row[0])
+    except Exception as e:
+        import logging
+        logging.error(f"Error loading initial stats: {e}")
+    finally:
+        conn.close()
+
     # Jalankan consumer di background
     asyncio.create_task(event_consumer())
 

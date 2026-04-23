@@ -45,7 +45,8 @@ async def main():
         # Kirim total 5000 event (50 batch x 100)
         for i in range(50):
             await send_batch(client, 100)
-            await asyncio.sleep(0.1) # Kasih nafas
+            # Sangat cepat, hampir tanpa jeda
+            await asyncio.sleep(0.01) 
             
     logger.info("Publisher finished its job.")
 
