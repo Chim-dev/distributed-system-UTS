@@ -1,25 +1,20 @@
-# Pakai versi spesifik yang lu minta, versi 'slim' biar ringan
+# Pakai versi 3.13.7-slim sesuai rekomendasi soal
 FROM python:3.13.7-slim
 
-# Set folder kerja di dalam container
 WORKDIR /app
 
-# Bikin non-root user buat security (wajib ada di best practice Docker)
+# Non-root user buat security
 RUN adduser --disabled-password --gecos '' appuser && \
     chown -R appuser:appuser /app
 
-# Ganti ke user yang baru dibuat
 USER appuser
 
-# Copy file requirements duluan biar proses install di-cache sama Docker
 COPY --chown=appuser:appuser Requirements.txt .
 RUN pip install --no-cache-dir -r Requirements.txt
 
-# Copy semua file kode lu (folder src)
 COPY --chown=appuser:appuser src/ ./src/
 
-# Buka port 8080 sesuai requirement tugas lu
 EXPOSE 8080
 
-# Perintah buat jalanin server FastAPI-nya
+# Default command (bisa dioverride di docker-compose)
 CMD ["python", "-m", "src.main"]

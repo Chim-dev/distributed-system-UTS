@@ -1,7 +1,7 @@
 {
-  "topic": "uts",
-  "event_id": "1",
-  "timestamp": "2026-04-23T16:00:00Z",
-  "source": "web",
-  "payload": {}
+  "topic": "string",
+  "event_id": "string-unik",
+  "timestamp": "ISO8601",
+  "source": "string",
+  "payload": { }
 }

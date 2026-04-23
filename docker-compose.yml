@@ -3,11 +3,20 @@ version: '3.8'
 services:
   aggregator:
     build: .
-    container_name: log_aggregator
+    container_name: aggregator_service
     ports:
       - "8080:8080"
     volumes:
-      - ./src:/app/src  # Opsional: biar file dedup.db muncul di folder lokal lu
+      - ./data:/app/data
+    networks:
+      - aggregator-net
+
+  publisher:
+    build: .
+    container_name: publisher_service
+    depends_on:
+      - aggregator
+    command: python -m src.publisher
     networks:
       - aggregator-net
 
