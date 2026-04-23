@@ -3,7 +3,7 @@
 Proyek ini adalah layanan pengumpul log (aggregator) berbasis Python FastAPI yang mendukung pengiriman asinkron, deduplikasi data, dan persistensi menggunakan SQLite.
 
 ## 📺 Demo Video
-**Link YouTube:** (https://www.youtube.com/watch?v=iWcvJES3J3M&t=151s)
+**Link YouTube:** (https://youtu.be/iWcvJES3J3M?si=jp0mggjod6dIHsCR)
 
 **DISCLAIMER:** Dalam video demonstrasi, saya menggunakan avatar virtual sebagai gaya presentasi agar video lebih dinamis dan tidak monoton. Penggunaan avatar ini murni untuk kebutuhan estetika dan sama sekali tidak dimaksudkan untuk mengurangi keseriusan atau rasa hormat terhadap materi teknis yang disajikan.
 
