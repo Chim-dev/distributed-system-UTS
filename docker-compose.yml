@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  aggregator:
+    build: .
+    container_name: log_aggregator
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app  # Opsional: biar file dedup.db muncul di folder lokal lu
+    networks:
+      - aggregator-net
+
+networks:
+  aggregator-net:
+    driver: bridge
