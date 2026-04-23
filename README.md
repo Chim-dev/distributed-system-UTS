@@ -5,6 +5,8 @@ Proyek ini adalah layanan pengumpul log (aggregator) berbasis Python FastAPI yan
 ## 📺 Demo Video
 **Link YouTube:** (https://www.youtube.com/watch?v=iWcvJES3J3M&t=151s)
 
+**DISCLAIMER:** Dalam video demonstrasi, saya menggunakan avatar virtual sebagai gaya presentasi agar video lebih dinamis dan tidak monoton. Penggunaan avatar ini murni untuk kebutuhan estetika dan sama sekali tidak dimaksudkan untuk mengurangi keseriusan atau rasa hormat terhadap materi teknis yang disajikan.
+
 ## 🚀 Cara Menjalankan
 1. Pastikan Docker dan Docker Compose sudah terinstal.
 2. Jalankan perintah:
